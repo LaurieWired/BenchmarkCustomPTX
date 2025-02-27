@@ -1,6 +1,6 @@
 # Custom PTX Instruction Benchmark
 
-This repository contains a CUDA benchmark designed to demonstrate and measure the performance benefits of using specialized PTX cache control instructions on NVIDIA Hopper GPUs. Specifically, it benchmarks the `ld.global.nc.L1::no_allocate.L2::256B` instruction that was created by DeepSeek in their [DeepEP library](https://github.com/deepseek-ai/DeepEP).
+This repository contains a CUDA benchmark designed to demonstrate and measure the performance benefits of using specialized PTX cache control instructions on NVIDIA Hopper GPUs. Specifically, it benchmarks the `ld.global.nc.L1::no_allocate.L2::256B` instruction that was used by DeepSeek in their [DeepEP library](https://github.com/deepseek-ai/DeepEP).
 
 ## What This Benchmark Demonstrates
 
