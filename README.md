@@ -18,12 +18,12 @@ When the specialized instruction is used correctly, it prevents the streaming da
 
 ## The Specialized PTX Instruction
 
-The benchmark demonstrates using a read-only PTX instruction `ld.global.nc.L1::no_allocate.L2::256B` to read from global data. The PTX modifier `.nc` indicates that a non-coherent cache, and `.L1::no_allocate` tells the hardware not to allocate space in L1 cache for the data.
+The benchmark demonstrates using a read-only PTX instruction `ld.global.nc.L1::no_allocate.L2::256B` to read from global data. The PTX modifier `.nc` indicates a non-coherent cache, and `.L1::no_allocate` tells the hardware not to allocate space in L1 cache for the data.
 
 ## Requirements
 
 - CUDA 12.3 and above
-- NVIDIA Hopper GPU (H100, H800, etc.)
+- NVIDIA Hopper GPU (Ex. H100)
 
 ## Building and Running
 ```
@@ -38,4 +38,4 @@ The benchmark outputs:
 - Speedup ratio between the two approaches
 - Verification that both implementations produce identical results
 
-A higher speedup indicates greater benefits from using the specialized instruction. Typical results on H100 GPUs show 1.2x-1.5x speedups, demonstrating the value of keeping frequently accessed data in L1 cache.
+A higher speedup indicates greater benefits from using the specialized instruction.
