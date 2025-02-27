@@ -18,7 +18,7 @@ When the specialized instruction is used correctly, it prevents the streaming da
 
 ## The Specialized PTX Instruction
 
-The benchmark demonstrates using a read-only PTX instruction `ld.global.nc.L1::no_allocate.L2::256B` to read volatile data. The PTX modifier `.nc` indicates that a non-coherent cache, and `.L1::no_allocate` tells the hardware not to allocate space in L1 cache for the data.
+The benchmark demonstrates using a read-only PTX instruction `ld.global.nc.L1::no_allocate.L2::256B` to read from global data. The PTX modifier `.nc` indicates that a non-coherent cache, and `.L1::no_allocate` tells the hardware not to allocate space in L1 cache for the data.
 
 ## Requirements
 
