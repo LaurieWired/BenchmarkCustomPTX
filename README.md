@@ -12,7 +12,7 @@ The benchmark simulates a common scenario in high-performance GPU computing:
 
 The benchmark compares two approaches:
 - **Standard Load**: Uses regular CUDA memory access operations
-- **Specialized Load**: Uses the custom PTX instruction `ld.global.nc.L1::no_allocate.L2::256B` for streaming data
+- **Specialized Load**: Uses the custom PTX instruction for streaming data
 
 When the specialized instruction is used correctly, it prevents the streaming data from polluting the L1 cache, keeping the frequently accessed data in L1 cache and resulting in significantly better performance.
 
