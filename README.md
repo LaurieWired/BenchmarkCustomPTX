@@ -16,10 +16,6 @@ The benchmark compares two approaches:
 
 When the specialized instruction is used correctly, it prevents the streaming data from polluting the L1 cache, keeping the frequently accessed data in L1 cache and resulting in significantly better performance.
 
-## The Specialized PTX Instruction
-
-The benchmark demonstrates using a read-only PTX instruction `ld.global.nc.L1::no_allocate.L2::256B` to read from global data. The PTX modifier `.nc` indicates a non-coherent cache, and `.L1::no_allocate` tells the hardware not to allocate space in L1 cache for the data.
-
 ## Requirements
 
 - CUDA 12.3 and above
@@ -30,12 +26,3 @@ The benchmark demonstrates using a read-only PTX instruction `ld.global.nc.L1::n
 nvcc -arch=sm_90 -o benchmark benchmark.cu
 ./benchmark
 ```
-
-## Understanding the Results
-
-The benchmark outputs:
-- Timings for both standard and specialized load approaches
-- Speedup ratio between the two approaches
-- Verification that both implementations produce identical results
-
-A higher speedup indicates greater benefits from using the specialized instruction.
